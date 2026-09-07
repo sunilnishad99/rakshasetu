@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* --- Color tokens: monsoon river palette --- */
+  --color-paper: #EDEAE2;
+  --color-paper-raised: #F7F5EF;
+  --color-ink: #16211E;
+  --color-ink-soft: #4A5550;
+
+  --color-river-900: #0B2942;
+  --color-river-700: #123A5C;
+  --color-river-500: #2E6B92;
+  --color-river-200: #B8D4E3;
+
+  --color-danger-700: #7A2A1C;
+  --color-danger-500: #C4432B;
+  --color-danger-100: #F6DCD3;
+
+  --color-warn-600: #A66B14;
+  --color-warn-400: #D98E2B;
+  --color-warn-100: #F5E3C4;
+
+  --color-safe-700: #2E4E3B;
+  --color-safe-500: #4C7A5E;
+  --color-safe-100: #DCE8DD;
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --shadow-card: 0 1px 2px rgba(11, 41, 66, 0.06), 0 6px 20px rgba(11, 41, 66, 0.08);
+  --color-heading: var(--color-river-900);
+  --color-border: #E1DDCF;
+  --color-border-strong: #DAD6C9;
+
+  color-scheme: light;
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+
+  --color-paper: #10181C;
+  --color-paper-raised: #17222799;
+  --color-paper-raised: #182226;
+  --color-ink: #E8EAE6;
+  --color-ink-soft: #A7AFA9;
+
+  --color-river-900: #0B2942;
+  --color-river-700: #1C4F73;
+  --color-river-500: #4B93BE;
+  --color-river-200: #1E3140;
+
+  --color-danger-700: #F4B7A7;
+  --color-danger-500: #E4664A;
+  --color-danger-100: #3A231E;
+
+  --color-warn-600: #F0C878;
+  --color-warn-400: #E0A13F;
+  --color-warn-100: #362A16;
+
+  --color-safe-700: #B4D6BE;
+  --color-safe-500: #5E9974;
+  --color-safe-100: #1C2A20;
+
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.35);
+  --color-heading: #DCEBF4;
+  --color-border: #263139;
+  --color-border-strong: #2E3A42;
+}
+
+body {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  margin: 0;
+  color: var(--color-heading);
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-river-500);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
